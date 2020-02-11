@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, NavLink } from 'react-router-dom'
 import Home from './Home'
-import Unicorn from './Unicorn'
+import Unicorns from './Unicorns'
 
 
 export default class App extends Component {
@@ -14,7 +14,7 @@ export default class App extends Component {
           <NavLink to='/puppies' className='nav'>Puppies</NavLink>
           <NavLink to='/sharks' className='nav'>Sharks</NavLink>
         </header>
-        <Route path='/unicorns' component={Unicorn} />
+        <Route path='/unicorns' component={Unicorns} />
         <Route exact path='/' component={Home} />
       </main>
     );

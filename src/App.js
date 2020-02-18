@@ -5,7 +5,6 @@ import Home from './Home'
 import Unicorns from './Unicorns'
 import Puppies from './Puppies'
 import Sharks from './Sharks'
-
 export default class App extends Component {
   render() {
     return (
@@ -17,8 +16,8 @@ export default class App extends Component {
         </header>
         <Route path='/unicorns' component={Unicorns} />
         <Route exact path='/' component={Home} />
-        <Route path='/puppies' compenent={Puppies} />
-        <Route path='/sharks' compenent={Sharks} />
+        <Route path='/puppies' component={Puppies} />
+        <Route path='/sharks' component={Sharks} />
       </main>
     );
   }

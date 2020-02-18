@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, NavLink } from 'react-router-dom'
 import Home from './Home'
-import Unicorns from './Unicorns'
-import Puppies from './Puppies'
-import Sharks from './Sharks'
+import Creatures from './creatures'
+import unicornData from './data/unicorn-data';
+import sharkData from './data/shark-data';
+import puppyData from './data/puppy-data'
 export default class App extends Component {
   render() {
     return (
@@ -14,10 +15,10 @@ export default class App extends Component {
           <NavLink to='/puppies' className='nav'>Puppies</NavLink>
           <NavLink to='/sharks' className='nav'>Sharks</NavLink>
         </header>
-        <Route path='/unicorns' component={Unicorns} />
         <Route exact path='/' component={Home} />
-        <Route path='/puppies' component={Puppies} />
-        <Route path='/sharks' component={Sharks} />
+        <Route path='/unicorns' render={() => <Creatures data={unicornData} />} />
+        <Route path='/puppies' render={() => <Creatures data={puppyData} />} />
+        <Route path='/sharks' render={() => <Creatures data={sharkData} />} />
       </main>
     );
   }
